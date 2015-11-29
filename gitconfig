@@ -1,0 +1,10 @@
+# Common Git configuration!
+
+[alias]
+	st = status
+	co = checkout
+	df = diff
+
+[user]
+	email = littleautomaton@gmail.com
+	name = SilentGray
