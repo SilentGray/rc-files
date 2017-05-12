@@ -1,10 +1,28 @@
 # Common Git configuration!
 
 [alias]
-	st = status
-	co = checkout
-	df = diff
+
+  st = status
+  co = checkout
+  cm = commit
+  rb = rebase
+  br = branch
+  df = diff --color
+  fd = diff --name-only
+  cp = cherry-pick
+
+  untracked = ls-files --others --exclude-standard
+
+  hist = log --all --graph --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s'
+  brs = log --branches --graph --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s'
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cD) %C(bold blue)<%an>%Creset' --abbrev-commit --date=local
+
+[merge]
+  tool = vimdiff
+
+[push]
+  default = current
 
 [user]
 	email = littleautomaton@gmail.com
-	name = SilentGray
+	name = Thomas Lee
